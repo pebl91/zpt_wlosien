@@ -1,0 +1,5 @@
+<h2 align="center"><%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+ <hr>
+  <%= simple_format(@article.description) %>
+<%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
