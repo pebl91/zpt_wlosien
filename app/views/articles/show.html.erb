@@ -2,4 +2,9 @@
 <div class="well col-xs-8 col-xs-offset-2">
  <hr>
   <%= simple_format(@article.description) %>
-<%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+  
+  <small>Created by: <%= @article.user.name  %>,
+<%= time_ago_in_words(@article.created_at) %> ago,
+last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
+
+<br><%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
