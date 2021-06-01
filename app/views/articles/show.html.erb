@@ -1,10 +1,26 @@
-<h2 align="center"><%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
+<!DOCTYPE html>
+
+<div class="container">
+
+
+<div class="well col-xs-9 col-xs-offset-2">
+ <h2 align="center"><%= @article.title %></h2>
  <hr>
   <%= simple_format(@article.description) %>
+  <center><b><h8>ZDJĘCIA:</b></center></h8>
+  <div class="row">
+    <% @article.gallery.each do |image| %>
+     <div class="column">
+      <%= image_tag image, width: "100%" %> <br />
+      </div>
+<% end %>
+</div>
+
   
   <small>Created by: <%= @article.user.name  %>,
 <%= time_ago_in_words(@article.created_at) %> ago,
 last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
 
 <br><%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+</div>
+</div>

@@ -2,6 +2,32 @@ $navbar-default-bg: black;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+.ter {
+ font-size: 1em;
+}
+   
+
+
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+ 
 
 #logo {
  float: left;
@@ -45,4 +71,75 @@ $navbar-default-bg: black;
 .listing {
  list-style: none;
  padding-left: 0;
+}
+
+.container1 {
+ width: 70%;
+ padding: center;
+ margin: auto;
+ font-family: 'Open Sans', sans-serif;
+}
+.containermy-5 {
+ 
+ width: 87%;
+ margin: auto;
+ font-family: "Prosto";
+}
+
+.jumbotron  {
+ display: block;
+ margin: auto;
+ width: 80%;
+ margin-bottom: 50px;
+ margin-top: 50px;
+ background-image: url("nature.gif");
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.container-fluid {
+ background-color: black;
+}
+
+.fot1 {
+ height: 50px;
+ padding: center;
+ padding-left: 75px;
+ font-weight: bold;
+ font-family: "Mon";
+ color: red;
+ ul {
+    
+    width:87%;
+    text-align:center;
+}
+ li {
+ float: center;
+ display: inline-block;
+ margin: 0 120px;
+}
+}
+
+
+.hr {
+ margin-top: 2px;
+ border-width:0;
+ color:black;
+ border-style: inset;
+ border-width: 1px;
+}
+
+.container {
+ font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+ border: none;
+ background: none;
+}
+
+p {
+ font-family: 'Open Sans', sans-serif;
+ justify-content: center;
+ font-size: 1.3em;
 }

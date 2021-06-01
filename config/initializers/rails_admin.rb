@@ -38,4 +38,39 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Article' do
+      edit do
+      field :title
+      field :description
+      field :created_at
+      field :updated_at
+      field :user_id
+      field :gallery, :multiple_active_storage
+    end
+  end
+
+    config.model 'Article' do
+      list do
+      field :title
+      field :description
+      field :created_at
+      field :updated_at
+      field :user_id
+      field :gallery, :multiple_active_storage
+    end
+  end
+  
+  config.model 'Article' do
+      show do
+      field :title
+      field :description
+      field :created_at
+      field :updated_at
+      field :user_id
+      field :gallery, :multiple_active_storage
+    end
+  end
+  
+
 end

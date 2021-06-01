@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 //= require jquery
 //= require bootstrap-sprockets
+//= require lightgallery
 global.toastr = require("toastr")
 import "../stylesheets/application"
 
