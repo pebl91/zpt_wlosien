@@ -29,7 +29,6 @@ gem 'kaminari'
 gem "mini_magick"
 gem 'tinymce-rails'
 gem 'image_processing'
-gem "rename"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -60,3 +59,4 @@ end
 group :production do
   gem 'pg', '1.2.3'
   gem 'aws-sdk-s3', require: false
+end 
