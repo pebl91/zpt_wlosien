@@ -9,13 +9,19 @@
 
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <body style="background-color: #FFFAF0;">
+    <body style="background-color: #FFEFD5">
     
-    <% unless flash.empty? %>
+
+
+
+    <%= render 'layouts/navigation' %>
+        <%= render 'layouts/rigthbox' %>
+    <%= yield %>
+     <% unless flash.empty? %>
    <script type="text/javascript">
       <% flash.each do |f| %>
     <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
@@ -23,10 +29,6 @@
    <% end %>
    </script>
 <% end %>
-
-
-    <%= render 'layouts/navigation' %>
-    <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
   

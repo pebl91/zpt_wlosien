@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-
 <div class="container">
+    <div class="well col-xs-8 col-xs-offset-2.float-left">
 
-
-<div class="well col-xs-9 col-xs-offset-2">
  <h2 align="center"><%= @article.title %></h2>
  <hr>
   <%= simple_format(@article.description) %>
@@ -22,5 +19,7 @@
 last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
 
 <br><%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+</div>
+</div>
 </div>
 </div>

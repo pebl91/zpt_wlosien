@@ -4,7 +4,7 @@
 
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container-fluid custom">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -19,24 +19,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Aktualności", articles_path %></li>
+        
         <li><%= link_to "Kadra", kadra_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wychowankowie <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">Wychowankowie <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Grupa I", grupa1_path %></li>
             <li><%= link_to "Grupa II", grupa2_path %></li>
             <li><%= link_to "Plan lekcji", '#' %></li>
-            <li role="separator" class="divider"></li>
             <li><%= link_to "Projekt CEO Młodzi Przedsiębiorczy", projekt_ceo_path %></li>
-            <li role="separator" class="divider"></li>
             <li><%= link_to "Projekt NP - LS", projekt_npls_path %></li>
           </ul>
         </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://bogdan.hostinghouse.pl/poczta/" target="_blank">Poczta</a></li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dla pracowników <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -47,6 +45,9 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
+        <li><%= link_to image_tag('/assets/news.svg', width: "30px"), articles_path, class: 'product-image__body' %></li>
+        <li><%= link_to image_tag('/assets/admin.svg', width: "30px"), rails_admin_path, class: 'product-image__body' %></li>
+        <li><%= link_to image_tag('/assets/mail.svg', width: "30px"), 'https://bogdan.hostinghouse.pl/poczta/', target: '_blank', class: 'product-image__body' %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

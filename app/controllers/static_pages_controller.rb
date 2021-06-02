@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
     skip_before_action :authenticate_user!, :only => [:index]
     skip_before_action :authenticate_user!, :only => [:kadra]
+    skip_before_action :authenticate_user!, :only => [:projekt_npls]
+    skip_before_action :authenticate_user!, :only => [:projekt_ceo]
+    skip_before_action :authenticate_user!, :only => [:grupa1]
+    skip_before_action :authenticate_user!, :only => [:grupa2]
     
     def projekt_npls
     end 
@@ -17,10 +21,10 @@ class StaticPagesController < ApplicationController
     def wychowankowie
     end 
     
-    def grup1
+    def grupa1
     end 
     
-    def grup1
+    def grupa2
     end 
 
 end
