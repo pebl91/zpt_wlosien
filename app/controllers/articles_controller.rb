@@ -19,6 +19,7 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
  end
  
  def index
+  @articles = Article.order("created_at")
   @articles = Article.all
   @articles = Article.order("id").page(params[:page]).per(5)
  end
