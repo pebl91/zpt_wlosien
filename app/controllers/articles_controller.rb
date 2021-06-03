@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
 skip_before_action :authenticate_user!, :only => [:index]
 skip_before_action :authenticate_user!, :only => [:show]
 before_action :set_article, only: [:edit, :update, :show, :destroy]
- 
+
+
 
  def new
  end
@@ -19,9 +20,9 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
  end
  
  def index
-  @articles = Article.order("created_at")
   @articles = Article.all
-  @articles = Article.order("id").page(params[:page]).per(5)
+  @articles = Article.order("id").page(params[:page]).per(5).reorder("created_at DESC")
+  
  end
 
 
