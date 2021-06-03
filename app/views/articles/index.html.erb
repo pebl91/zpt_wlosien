@@ -1,6 +1,7 @@
 <div class="item">
 <div class="container" id="parent">
 <h1 align="center.float-left">Aktualności</h1><% @articles.each do |article| %>
+<br>
  <div class="row">
   <div class="col-xs-8 col-xs-offset-2.float-left">
    <div class="well well-lg">
@@ -14,19 +15,17 @@
         <small>Created by: <%= article.user.name  %>,
         <%= time_ago_in_words(article.created_at) %> ago,
          last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
-         
-
-         
       </div>
     </div>
     </div>
-   </div>
-  </div>
+    </div>
   <% end %>
+  </div>
  <div>
+   </div>
+ </div>
+
   <% unless @articles.empty? %>
    <%= paginate @articles %>
   <% end %>
- </div>
- </div>
  </div>
