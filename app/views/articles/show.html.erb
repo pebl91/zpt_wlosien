@@ -14,11 +14,11 @@
 </div>
 
   
-  <small>Created by: <%= @article.user.name  %>,
-<%= time_ago_in_words(@article.created_at) %> ago,
-last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
+  <small>Wytworzone przez: <%= @article.user.name  %>,
+<%= time_ago_in_words(@article.created_at) %> temu,
+Zaktualizowano: <%= time_ago_in_words(@article.updated_at) %> temu</small>
 
-<br><%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+<br><%= link_to 'Powrót', articles_path, class: "btn btn-xs btn-success" %>
 </div>
 </div>
 </div>
