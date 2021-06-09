@@ -10,7 +10,7 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
  
   def create
     article = Article.create! params.require(:article).permit(:content)
-    article.images.attach(params[:comment][:images])
+    article.gallery.attach(params[:comment][:gallery])
     redirect_to article    
   end
  

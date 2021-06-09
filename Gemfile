@@ -31,6 +31,13 @@ gem 'tinymce-rails'
 gem 'image_processing'
 gem 'jquery-turbolinks'
 gem 'rails_admin-i18n'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem 'ed25519'
+gem 'bcrypt_pbkdf' 
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
